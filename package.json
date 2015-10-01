@@ -2,61 +2,29 @@
   "name": "react-inline-confirm",
   "version": "1.0.0",
   "description": "A simple react component that allows you to get a confirmation of action from the user before executing an action.",
-  "main": "react-inline-confirm.jsx",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "babel index.jsx -o index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/civicsource/react-inline-confirm.git"
+    "url": "https://github.com/civicsource/react-inline-confirm.git"
   },
   "keywords": [
-    "react",
-    "react",
-    "component",
-    "react",
-    "confirmation",
+    "react-component",
     "react",
     "confirmation",
     "button",
-    "react",
-    "confirmation",
-    "component",
-    "react",
     "confirm",
-    "react",
-    "confirm",
-    "button",
-    "react",
-    "confirm",
-    "component",
-    "react",
     "inline",
-    "confirmation",
-    "react",
-    "inline",
-    "confirmation",
-    "button",
-    "react",
-    "inline",
-    "confirmation",
-    "component",
-    "react",
-    "inline",
-    "confirm",
-    "react",
-    "inline",
-    "confirm",
-    "button",
-    "react",
-    "inline",
-    "confirm",
-    "component"
+    "inline-confirm"
   ],
   "author": "Archon Information Systems",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/civicsource/react-inline-confirm/issues"
+  "dependencies": {
+    "react": "^0.13.3"
   },
-  "homepage": "https://github.com/civicsource/react-inline-confirm#readme"
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
 }
