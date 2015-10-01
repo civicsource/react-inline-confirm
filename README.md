@@ -5,7 +5,7 @@
 ## Install with [NPM](https://www.npmjs.com/)
 
 ```
-npm install react-inline-confirm
+npm install react-inline-confirm --save
 ```
 
 ## How to Use
