@@ -1,7 +1,7 @@
 import React, { Component, PropTypes as t } from "react";
 
 export default class InlineConfirmButton extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.state = {
@@ -22,6 +22,15 @@ export default class InlineConfirmButton extends Component {
 				isPrompting: false
 			});
 		}
+
+		if (!this.props.isExecuting && nextProps.isExecuting) {
+			this.setState({
+				resetTimer: null,
+				buttonText: this.props.textValues ? this.props.textValues[this.props.textValues.length - 1] : null,
+				className: `${this.props.className ? this.props.className + " " : null}active disabled`,
+				isPrompting: false
+			});
+		}
 	}
 
 	componentWillUpdate(nextProps, nextState) {
@@ -39,7 +48,7 @@ export default class InlineConfirmButton extends Component {
 	}
 
 	handleClick(event) {
-		if(!this.props.disabled) {
+		if (!this.props.disabled) {
 			const textValues = this.props.textValues;
 			const stepIndex = textValues.indexOf(this.state.buttonText);
 
@@ -78,8 +87,8 @@ export default class InlineConfirmButton extends Component {
 		}
 	}
 
-	render () {
-		const duration = this.state.isTimedOut ? 0 : this.props.timeOut/1000;
+	render() {
+		const duration = this.state.isTimedOut ? 0 : this.props.timeOut / 1000;
 		const transition = `${duration}s width linear`;
 
 		const progressStyles = {
@@ -92,7 +101,7 @@ export default class InlineConfirmButton extends Component {
 
 		const progressBar = this.props.showTimer ? <div style={progressStyles}></div> : null;
 
-		return <button disabled={this.props.disabled} type="button" className={this.state.className} onClick={this.handleClick.bind(this)}>
+		return <button disabled={this.props.disabled} type="button" className={this.state.className} onClick={this.handleClick.bind(this) }>
 			{this.props.children}
 			<span>{this.state.buttonText}</span>
 			{progressBar}
