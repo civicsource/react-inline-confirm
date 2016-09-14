@@ -2,6 +2,8 @@
 
 > A react component that allows you to get a confirmation of action from the user before executing an action.
 
+![screenshot](screenshot.gif)
+
 ## Install
 
 ```
@@ -28,5 +30,3 @@ function handleClick() {
 ```
 
 This would allow the user to confirm their action before calling the `handleClick` function.
-
-![screenshot](screenshot.gif)
