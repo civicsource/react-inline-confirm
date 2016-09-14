@@ -1,6 +1,6 @@
 {
   "name": "react-inline-confirm",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A simple react component that allows you to get a confirmation of action from the user before executing an action.",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,8 @@
       "stage-2"
     ]
   },
-  "dependencies": {
-    "react": "^0.14.3"
+  "peerDependencies": {
+    "react": ">= 0.14.x < 16"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
