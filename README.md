@@ -12,8 +12,6 @@ npm install react-inline-confirm --save
 
 ## How to Use
 
-```IsExecuting``` is a required flag prop that can be used to track the execution state of the ```react-inline-confirm``` button's click event handler from the parent component. This can come in handy when the callback method returns a promise or performs asynchronous operations in general, since those can return before the method execution actually produces a result.
-
 ```jsx
 import React from "react";
 import InlineConfirmButton from "react-inline-confirm";
@@ -33,3 +31,4 @@ function handleClick() {
 ```
 
 This would allow the user to confirm their action before calling the `handleClick` function.
+`IsExecuting` is a required flag prop that can be used to track the execution state of the `react-inline-confirm` button's click event handler from the parent component. This can come in handy when the callback method returns a promise or performs asynchronous operations in general, since those can return before the method execution actually produces a result.
