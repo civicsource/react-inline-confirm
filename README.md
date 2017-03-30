@@ -1,7 +1,6 @@
 # React Inline Confirm Component
 
 > A react component that allows you to get a confirmation of action from the user before executing an action. 
-> 'isExecuting' is the state of react when the button was clicked. The default value should be false. It can be passed as an argument for your react component.
 
 ![screenshot](screenshot.gif)
 
@@ -12,6 +11,8 @@ npm install react-inline-confirm --save
 ```
 
 ## How to Use
+
+```isExecuting``` is the state of react when the button was clicked. The default value should be false. It can be passed as an argument for your react component.
 
 ```jsx
 import React from "react";
