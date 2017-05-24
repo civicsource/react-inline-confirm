@@ -1,4 +1,5 @@
-import React, { Component, PropTypes as t } from "react";
+import React, { Component } from "react";
+import { PropTypes as t } from "prop-types";
 
 export default class InlineConfirmButton extends Component {
 	constructor(props) {
