@@ -29,7 +29,7 @@
     ]
   },
   "peerDependencies": {
-    "react": ">= 0.14.x < 16"
+    "react": ">= 0.14.x < 16.x.x"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
