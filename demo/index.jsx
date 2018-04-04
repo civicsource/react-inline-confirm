@@ -8,9 +8,10 @@ class Root extends Component {
     }
 
     handleClick = () => {
+        console.log("isExecuting: true")
         this.setState({ isExecuting: true })
         setTimeout(() => {
-            console.log("test")
+            console.log("isExecuting: false")
             this.setState({ isExecuting: false })
         }, 3000)
     }

@@ -46,7 +46,7 @@ export default class InlineConfirmButton extends Component {
 		}
 	}
 
-	handleClick(event) {
+	handleClick = event => {
 		if (!this.props.disabled) {
 			const textValues = this.props.textValues;
 			const stepIndex = textValues.indexOf(this.state.buttonText);
@@ -100,7 +100,7 @@ export default class InlineConfirmButton extends Component {
 
 		const progressBar = this.props.showTimer ? <div style={progressStyles}></div> : null;
 
-		return <button disabled={this.props.disabled} type="button" className={this.state.className} onClick={this.handleClick.bind(this) }>
+		return <button disabled={this.props.disabled} type="button" className={this.state.className} onClick={this.handleClick}>
 			{this.props.children}
 			<span>{this.state.buttonText}</span>
 			{progressBar}
