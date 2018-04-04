@@ -39,3 +39,5 @@ This would allow the user to confirm their action before calling the `handleClic
 2. `npm run-script build`
 3. `npm run-script start`
 4. In your browser, navigate to `http://localhost:8080/demo/`
+
+To reload, repeat steps `2` and `3`, then refresh your browser.
