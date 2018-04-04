@@ -6,13 +6,15 @@ class Root extends Component {
     state = {
         isExecuting: false
     }
+    
+    debug = () => {
+        console.log(this.state);
+    }
 
     handleClick = () => {
-        console.log("isExecuting: true")
-        this.setState({ isExecuting: true })
+        this.setState({ isExecuting: true }, this.debug);
         setTimeout(() => {
-            console.log("isExecuting: false")
-            this.setState({ isExecuting: false })
+            this.setState({ isExecuting: false }, this.debug)
         }, 3000)
     }
 
@@ -22,8 +24,8 @@ class Root extends Component {
 
         return (
             <InlineConfirmButton className="btn btn-default" textValues={textValues} showTimer isExecuting={this.state.isExecuting} onClick={this.handleClick}>
-		        <i className={confirmIconClass}></i>
-	        </InlineConfirmButton>
+                <i className={confirmIconClass}></i>
+            </InlineConfirmButton>
         )
     }
 }
