@@ -13,7 +13,11 @@ module.exports = {
 	devtool: "source-map",
 	resolve: {
 		extensions: [".js", ".jsx", ".json"]
-    },
+	},
+	devServer: {
+		contentBase: path.join(__dirname, "demo"),
+		port: 3139
+	},
     module: {
 		rules: [
 			{
