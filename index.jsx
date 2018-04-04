@@ -14,36 +14,34 @@ export default class InlineConfirmButton extends Component {
 		}
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (this.props.isExecuting && !nextProps.isExecuting) {
-			this.setState({
-				resetTimer: null,
-				buttonText: this.props.textValues ? this.props.textValues[0] : null,
-				className: this.props.className,
-				isPrompting: false
-			});
-		}
-
-		if (!this.props.isExecuting && nextProps.isExecuting) {
-			this.setState({
-				resetTimer: null,
-				buttonText: this.props.textValues ? this.props.textValues[this.props.textValues.length - 1] : null,
-				className: `${this.props.className ? this.props.className + " " : null}active disabled`,
-				isPrompting: false
-			});
-		}
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-		if (this.state.isPrompting && !nextState.isPrompting) {
+	componentDidUpdate(prevProps, prevState) {
+		if (prevState.isPrompting && !this.state.isPrompting) {
 			this.setState({
 				isTimedOut: true
 			});
 		}
 
-		if (!this.state.isPrompting && nextState.isPrompting) {
+		if (!prevState.isPrompting && this.state.isPrompting) {
 			this.setState({
 				isTimedOut: false
+			});
+		}
+
+		if (prevProps.isExecuting && !this.props.isExecuting) {
+			this.setState({
+				resetTimer: null,
+				buttonText: prevProps.textValues ? prevProps.textValues[0] : null,
+				className: prevProps.className,
+				isPrompting: false
+			});
+		}
+
+		if (!prevProps.isExecuting && this.props.isExecuting) {
+			this.setState({
+				resetTimer: null,
+				buttonText: prevProps.textValues ? prevProps.textValues[prevProps.textValues.length - 1] : null,
+				className: `${prevProps.className ? prevProps.className + " " : null}active disabled`,
+				isPrompting: false
 			});
 		}
 	}
