@@ -39,8 +39,8 @@
     "babel-preset-es2015": "^7.0.0-beta.3",
     "babel-preset-react": "^7.0.0-beta.3",
     "babel-preset-stage-2": "^7.0.0-beta.3",
-    "react": "^>=16.3 < 18",
-    "react-dom": "^>=16.3 < 18",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "webpack": "4.x",
     "webpack-cli": "^1.5.1",
     "webpack-dev-server": "3.x"
